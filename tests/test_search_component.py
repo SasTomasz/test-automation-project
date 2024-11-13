@@ -1,8 +1,6 @@
-from src.main_page import MainPage
 from src.search_result_page import SearchResultPage
 
-def test_search_returns_warning_to_logout_user(driver):
-    main_page = MainPage(driver)
+def test_search_returns_warning_to_logout_user(driver, main_page):
     main_page.go_to_main_page()
     main_page.check_the_page_is_ready()
     main_page.fill_search_field("automation")
