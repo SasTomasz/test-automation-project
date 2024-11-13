@@ -1,15 +1,5 @@
-import pytest
-
-from src.driver_factory import DriverFactory
 from src.main_page import MainPage
 from src.search_result_page import SearchResultPage
-
-
-@pytest.fixture
-def driver():
-    driver = DriverFactory.get_driver('chrome')
-    yield driver
-    driver.quit()
 
 def test_search_returns_warning_to_logout_user(driver):
     main_page = MainPage(driver)
