@@ -6,7 +6,6 @@ from selenium.webdriver.firefox.webdriver import WebDriver as FirefoxWebDriver
 class DriverFactory:
     @staticmethod
     def get_driver(browser_name):
-
         if browser_name == 'chrome':
             driver = ChromeWebDriver()
         elif browser_name == 'firefox':
